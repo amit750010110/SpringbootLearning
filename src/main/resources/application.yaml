@@ -3,9 +3,9 @@ spring:
     name: demo
 
   datasource:
-    url: jdbc:postgresql://ep-gentle-mud-aiyoj8kw-pooler.c-4.us-east-1.aws.neon.tech:5432/neondb?sslmode=require&channelBinding=require
-    username: neondb_owner
-    password: npg_EsIge9bGkmd1
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
     driver-class-name: org.postgresql.Driver
 
   jpa:
@@ -19,4 +19,4 @@ spring:
 
 
 server:
-  port: 8081
+  port: ${PORT:8080}
